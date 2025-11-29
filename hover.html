@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unequal Broken Circle</title>
+    <style>
+      .hover-chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  background: radial-gradient(circle at center, #0a0a0a, #000);
+  height: 100vh;
+}
+
+/* SVG styling */
+.skillcirclesvg {
+  width: 150px;
+  height: 150px;
+  transform: rotateX(55deg);
+}
+
+/* Base circle */
+.skillcirclesvg circle {
+  fill: none;
+  stroke: #333;
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: all 0.4s ease;
+}
+
+/* Individual colors */
+.circlehtml  { stroke-dasharray: 472 100; stroke: orange; }
+.circlecss   { stroke-dasharray: 380 150; stroke: #a000ff; }
+.circlejs    { stroke-dasharray: 340 200; stroke: #87bd23; }
+.circlereact { stroke-dasharray: 410 120; stroke: #21808d; }
+
+/* Hover effects for circles */
+.skillcirclesvg:hover circle {
+  transform: scale(1.15);
+  opacity: 1;
+  filter: drop-shadow(0 0 10px currentColor);
+}
+
+/* Position the popups */
+.skill-item {
+  position: relative;
+}
+
+.high {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  opacity: 0;
+  text-align: center;
+  color: white;
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+
+/* Pop-up on hover */
+.skill-item:hover .high {
+  opacity: 1;
+  transform: translate(-50%, -80%) scale(1);
+}
+
+/* Icon color per skill */
+.high1 .h-ic { color: orange; }
+.high2 .h-ic { color: #a000ff; }
+.high3 .h-ic { color: #87bd23; }
+.high4 .h-ic { color: #21808d; }
+
+.h-ic {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="hover-chart">
+
+  <!-- HTML circle + icon -->
+  <div class="skill-item">
+    <svg class="skillcirclesvg" viewBox="0 0 200 200">
+      <circle class="segmenthtml circlehtml" cx="100" cy="100" r="80" />
+    </svg>
+    <div class="high high1">
+      <i class="fa-brands fa-html5 h-ic"></i>
+      <p>HTML - 90%</p>
+    </div>
+  </div>
+
+  <!-- CSS circle + icon -->
+  <div class="skill-item">
+    <svg class="skillcirclesvg" viewBox="0 0 200 200">
+      <circle class="segmentcss circlecss" cx="100" cy="100" r="80" />
+    </svg>
+    <div class="high high2">
+      <i class="fa-brands fa-css3-alt h-ic"></i>
+      <p>CSS - 80%</p>
+    </div>
+  </div>
+
+  <!-- JS circle + icon -->
+  <div class="skill-item">
+    <svg class="skillcirclesvg" viewBox="0 0 200 200">
+      <circle class="segmentjs circlejs" cx="100" cy="100" r="80" />
+    </svg>
+    <div class="high high3">
+      <i class="fa-brands fa-js h-ic"></i>
+      <p>JavaScript - 75%</p>
+    </div>
+  </div>
+
+  <!-- React circle + icon -->
+  <div class="skill-item">
+    <svg class="skillcirclesvg" viewBox="0 0 200 200">
+      <circle class="segmentreact circlereact" cx="100" cy="100" r="80" />
+    </svg>
+    <div class="high high4">
+      <i class="fa-brands fa-react h-ic"></i>
+      <p>React - 85%</p>
+    </div>
+  </div>
+
+</div>
+
+  </body>
+</html>

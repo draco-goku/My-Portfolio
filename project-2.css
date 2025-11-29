@@ -1,0 +1,255 @@
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.overall{
+      background-color: black;
+         /* overflow-x: hidden; */
+}
+.project-section{
+    min-height:100vh;
+    /* overflow-x: hidden; */
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    width: 100%;
+      overflow: hidden;
+}
+
+.project-row{
+    /* gap: 20px; */
+    min-height:600px;
+    /* padding-top:20px; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    width:50%;
+  
+}
+.right{
+    width:50%;
+    min-height: 100vh;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px 0px 0px 50px;
+    color: #FFFFFF;
+}
+.frame{
+    display: flex;
+    gap:50px;
+    flex-direction: column;
+
+}
+.top p{
+    width: 50%;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    animation: top;
+    animation-delay: 2s;
+    animation-duration: 2s;
+    transition: all ease;
+    overflow: hidden;
+     opacity: 0;
+     animation-fill-mode: both;
+}
+@keyframes top {
+    from{
+        transform: translateY(-500px);
+       
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.top-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:100%;
+    align-items: center;
+     animation: right;
+    animation-delay: 4s;
+    animation-duration: 2s;
+    transition: all ease;
+    overflow: hidden;
+     opacity: 0;
+     animation-fill-mode: both;
+}
+@keyframes right {
+    from{
+        transform: translatex(200px);
+       
+    }
+    to{
+        transform: translatex(0px);
+        opacity: 1;
+    }
+}
+.p-img p{
+    display: flex;
+
+    justify-content: space-between;
+    width: 100%;
+    opacity: 0;
+    color: #FFFFFF;
+    transition: all 0.5s;
+    padding: 10px;
+}
+.top-right a{
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: grey;
+    padding: 10px 30px 10px 30px ;
+    border-radius: 10px;
+
+}
+.top-right img{
+    width: 100%;
+}
+.p-img{
+    
+    background-position:65%;
+    background-repeat: no-repeat;
+    background-size: cover;
+   object-fit: cover;
+     width:100%; 
+     animation-timing-function: ease-in-out;
+     animation-fill-mode: both;
+     
+}
+@keyframes center{
+    from{
+        transform:scale(1.2)  translateX(200px);
+        
+    }
+     to{
+        transform: scale(1)  translateX(0px);
+      
+    }
+}
+
+
+.p-img3{
+     background-image:url("./p3.jpg");
+     /* width: 450px; */
+         background-position:45%;
+         position: relative;
+          animation-name:center;
+          animation-duration: 2s;
+}
+
+.project-row{
+    /* position:absolute;
+    z-index: 3; */
+}
+
+/* animation */
+/* @keyframes left{
+    from{
+        transform: translateX(0px);
+    }
+     to{
+        transform: translateX(-330px);
+    }
+}
+
+@keyframes right{
+    from{
+        transform: translateX(0px);
+    }
+     to{
+        transform: translateX(1000px);
+    }
+} */
+/* 
+@media only screen and (min-width:300px) and (max-width:600px){
+    .master-project span{
+    font-size: 31px;
+}
+.project-row{
+    
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+}
+.p-img{
+    
+    width:90%;
+}
+}
+@media only screen and (min-width:900px) and (max-width:1240px){
+    .master-project span{
+    font-size: 120px;
+}
+.p-img{
+    width:240px;
+}
+.p-img5{
+    width:205px;
+}
+.school-mark{
+    flex-wrap: wrap;
+}
+
+}
+
+@media only screen and (min-width:1240px) and (max-width:1455px){
+
+.master-project span{
+    font-size: 130px;
+}
+.p-img{
+    width:290px;
+}
+.p-img5{
+    width:235px;
+}
+
+}
+@media only screen and (min-width:600px) and (max-width:900px){
+    .overall{
+        width: 100%;
+    }
+    .name{
+        left:20px;
+    }
+    .name h1{
+    font-size: 80px;
+   }
+   .name h2{
+    font-size: 30px;
+   }
+   .name p{
+    font-size: 20px;
+    width:100%;
+   }
+   .first-page img{
+    width: 100%;
+   }
+.first-page{
+    width: 100%;
+}
+.social-media,.social-media-1{
+    width:250px;
+    min-height:250px;
+}
+.social-networks{
+    font-size:25px;
+}
+.c-icon{
+position: absolute;
+top:90%;
+}
+.navbar{
+        width: 75%;
+}
+} */
